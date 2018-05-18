@@ -1,6 +1,6 @@
 #!/bin/bash
 cat <<EOF
-On est dans le script 
+On est dans le script sans rien
 EOF
 pwd
 
