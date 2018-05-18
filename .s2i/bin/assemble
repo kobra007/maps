@@ -1,5 +1,0 @@
-#!/bin/bash
-cat <<EOF
-On est dans le script .......
-EOF
-
