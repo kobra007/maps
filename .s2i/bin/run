@@ -1,7 +1,7 @@
 #!/bin/bash
 cat <<EOF
-On est dans le script .......
+On est dans le script 
 EOF
 pwd
-mkdir $OPENSHIFT_DATA_DIR/geoserver_data
+
 export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=${OPENSHIFT_DATA_DIR}geoserver_data
