@@ -2,4 +2,5 @@
 cat <<EOF
 On est dans le script 
 EOF
-echo ${OPENSHIFT_DATA_DIR}
+mkdir ./geoserver_data
+export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=./geoserver_data
