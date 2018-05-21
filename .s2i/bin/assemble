@@ -14,5 +14,5 @@ fi
 export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=./geoserver_data
 
 echo Amine Starts deploy
-openshift-deploy
+
 echo Complete
