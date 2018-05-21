@@ -3,9 +3,11 @@ cat <<EOF
 On est dans le script 
 EOF
 mkdir ./geoserver_data
-if [ ! -d "./geoserver_data" ]; then
-  # Control will enter here if $DIRECTORY doesn't exist.
-echo nexiste pas
+if [  -d "./geoserver_data" ]; then
+  
+cat <<EOF
+il exist
+EOF
 fi
 
 

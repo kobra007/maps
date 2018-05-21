@@ -1,8 +1,0 @@
-#!/bin/bash
-cat <<EOF
-On est dans le script sans rien
-EOF
-echo $OPENSHIFT_DATA_DIR
-export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=geoserver_data
-
-
