@@ -1,0 +1,18 @@
+#!/bin/bash
+cat <<EOF
+On est dans le script 
+EOF
+
+if [  -d "./geoserver_data" ]; then
+  
+cat <<EOF
+il exist
+EOF
+fi
+
+
+export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=./geoserver_data
+
+echo Amine Starts deploy
+
+echo Complete
