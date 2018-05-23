@@ -1,0 +1,27 @@
+#!/bin/bash
+cat <<EOF
+Start deploy script
+-------------------
+EOF
+
+if [  ! -d "./geoserver_data" ]; then
+  
+cat <<EOF
+=> creating data dir ...
+EOF
+
+mkdir geoserver_data
+
+cat <<EOF
+=> changing access
+EOF
+chmod 777 ./geoserver_data
+fi
+
+export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=./geoserver_data
+
+echo Starts deploy
+cp /opt/app-root/src/./ROOT.war /wildfly/standalone/deployments/ROOT.war
+echo Done.
+
+
