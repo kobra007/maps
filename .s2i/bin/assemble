@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+${STI_SCRIPTS_PATH}/assemble
+
+cat <<EOF
+Assemble script
+-------------------
+EOF
+echo working on :
+pwd
+
+if [   -d "./geoserver_data" ]; then
+  
+cat <<EOF
+=> data dir exist ...
+EOF
+
+# set permissions for any installed artifacts
+#fix-permissions /opt/app-root
+
+chgrp -R 0 ./geoserver_data
+
+chmod -R g+rwX ./geoserver_data
+
+chmod -R 777 ./geoserver_data
+
+echo --------------
+cd ./geoserver_data
+ls -l 
+echo --------------
+
+fi
+
+
+
+
+echo Done Assemble.
+
+
