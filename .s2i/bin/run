@@ -11,19 +11,13 @@ if [   -d "./geoserver_data" ]; then
 cat <<EOF
 => data dir exist ...
 EOF
+cd ./geoserver_data
+ls
 
-cat <<EOF
-=> changing access
-EOF
-chmod 777 ./geoserver_data
 fi
 
-echo --------------
-ls
-echo --------------
 
-
-
+exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 
 echo Done.
 
