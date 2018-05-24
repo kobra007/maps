@@ -15,16 +15,7 @@ EOF
 # set permissions for any installed artifacts
 #fix-permissions /opt/app-root
 
-chgrp -R 0 ./geoserver_data
 
-chmod -R g+rwX ./geoserver_data
-
-chmod -R 777 ./geoserver_data
-
-echo --------------
-cd ./geoserver_data
-ls -l 
-echo --------------
 
 fi
 
@@ -32,6 +23,11 @@ fi
 
 
 exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+
+echo -------------- After deploy on server -----------
+cd ./geoserver_data/log
+ls -l 
+echo -------------------------------------------------
 echo Done.
 
 
