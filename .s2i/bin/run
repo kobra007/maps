@@ -14,6 +14,7 @@ EOF
 
 
 echo --------------
+cd ./geoserver_data
 ls -l 
 echo --------------
 
