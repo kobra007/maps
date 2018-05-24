@@ -1,0 +1,30 @@
+#!/bin/bash
+cat <<EOF
+Start script
+-------------------
+EOF
+echo working on :
+pwd
+
+if [   -d "./geoserver_data" ]; then
+  
+cat <<EOF
+=> data dir exist ...
+EOF
+
+cat <<EOF
+=> changing access
+EOF
+chmod 777 ./geoserver_data
+fi
+
+echo --------------
+ls
+echo --------------
+
+
+
+
+echo Done.
+
+
