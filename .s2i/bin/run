@@ -12,17 +12,15 @@ cat <<EOF
 => data dir exist ...
 EOF
 
-cat <<EOF
-=> changing access
-EOF
-chmod -R 777 ./geoserver_data
+
+echo --------------
+ls -l 
+echo --------------
+
 fi
 
-echo --------------
-ls
-echo --------------
 
-export CATALINA_OPTS=-DGEOSERVER_DATA_DIR=./geoserver_data
+
 
 exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 echo Done.
