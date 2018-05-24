@@ -25,7 +25,7 @@ fi
 exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 
 echo -------------- After deploy on server -----------
-cd ./geoserver_data/log
+cd ./geoserver_data/logs
 ls -l 
 echo -------------------------------------------------
 echo Done.
