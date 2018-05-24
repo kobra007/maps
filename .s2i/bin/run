@@ -13,7 +13,12 @@ cat <<EOF
 EOF
 
 # set permissions for any installed artifacts
-fix-permissions /opt/app-root
+#fix-permissions /opt/app-root
+
+chgrp -R 0 ./geoserver_data
+
+chmod -R g+rwX ./geoserver_data
+
 chmod -R 777 ./geoserver_data
 
 echo --------------
