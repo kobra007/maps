@@ -11,7 +11,7 @@ if [   -d "./geoserver_data" ]; then
 cat <<EOF
 => data dir exist ...
 EOF
-
+sudo chmod -R 777 ./geoserver_data
 
 echo --------------
 cd ./geoserver_data
